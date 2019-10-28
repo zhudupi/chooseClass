@@ -23,18 +23,10 @@ export default {
 				{label:'同意',value:2},
 				{label:'非常同意',value:3},
 			],
-			select:0,
 		}
 	},
 	methods: {
-		alertchild() {
-			this.$emit('selectRadio')
-		},
-		up(){
-			console.log('子组件选择了'+select)
-		},
 		clickRadio(v,i){
-			this.select=v
 			this.$emit('selectRadio',v,i)
 		}
 	},

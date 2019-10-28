@@ -53,10 +53,20 @@ export default {
 			var a=this.answer[0].reduce(function(prev,cur){return prev+cur});
 			var b=this.answer[1].reduce(function(prev,cur){return prev+cur});
 			var c=this.answer[2].reduce(function(prev,cur){return prev+cur});
-			var max=Math.max.apply(Math,[a,b,c])
+			var answers=[a,b,c];
+			var max=Math.max.apply(Math,answers)
 			var arr=[];
-			[a,b,c].forEach(function(e,i){
-				arr.push(that.imgurl[i]);
+			console.log(a)
+			console.log(b)
+			console.log(c)
+			console.log(max)
+			console.log(answers)
+			answers.forEach(function(e,i){
+				console.log(max)
+				console.log(e)
+				if(max==e){
+					arr.push(that.imgurl[i]);
+				}
 			})
 			this.result=arr
 		}
